@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
             mListRecyclerView?.visibility = View.VISIBLE
             mGenderBottomDialog.dismiss()
 
+            mGenderList.clear()
+
             genderList.forEach {
                 if (it.isSelected) {
                     mGenderList.add(it)
