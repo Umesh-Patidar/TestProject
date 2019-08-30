@@ -1,4 +1,4 @@
-package mytestproj.com
+package mytestproj.com.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -8,9 +8,11 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import mytestproj.com.R
 import mytestproj.com.adapter.GenderAdapter
 import mytestproj.com.fragment.GenderBottomDialog
 import mytestproj.com.model.Gender
+import mytestproj.com.utils.Dialogs
 
 
 class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
@@ -39,6 +41,8 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         text_edit.setOnClickListener {
             mGenderBottomDialog.show(supportFragmentManager, "add_photo_dialog_fragment")
         }
+
+        dialogPopUp()
     }
 
     override fun buttonClick(genderList: List<Gender>) {
@@ -61,5 +65,17 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
 
         }
     }
-}
+
+    private  fun dialogPopUp(){
+
+        button_dialog.setOnClickListener {
+            Dialogs.showSuccessDialog(this, object : Dialogs.IDialogCallback {
+                override fun onConfirmed() {}
+                override fun onDenied() {}
+            })
+        }
+        }
+
+    }
+
 
