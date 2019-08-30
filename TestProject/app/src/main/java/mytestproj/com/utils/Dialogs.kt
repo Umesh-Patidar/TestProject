@@ -6,11 +6,13 @@ import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Button
+import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
 import mytestproj.com.R
 
 object Dialogs {
+    var popupWindow: PopupWindow? = null
 
     fun getDialog(view: Int, activity: Activity): Dialog {
         val dialog = Dialog(activity)
@@ -53,6 +55,10 @@ object Dialogs {
     interface IDialogCallback {
         fun onConfirmed()
         fun onDenied()
+    }
+
+    public fun dismissEvent() {
+        popupWindow?.dismiss()
     }
 
 }

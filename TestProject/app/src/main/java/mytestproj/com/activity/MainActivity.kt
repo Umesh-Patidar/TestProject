@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
@@ -16,7 +17,6 @@ import mytestproj.com.utils.Dialogs
 
 
 class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
-
 
     var mListRecyclerView: RecyclerView? = null
     var mAdapter: GenderAdapter? = null
@@ -33,7 +33,6 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         mButton = findViewById(R.id.button_submit)
         mListRecyclerView?.layoutManager = LinearLayoutManager(this,  LinearLayout.HORIZONTAL, false)
 
-
         editText.setOnClickListener {
             mGenderBottomDialog.show(supportFragmentManager, "add_photo_dialog_fragment")
         }
@@ -43,9 +42,11 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         }
 
         dialogPopUp()
+        dataListRecycler()
     }
 
     override fun buttonClick(genderList: List<Gender>) {
+
         if (genderList.isNotEmpty()) {
             editText.visibility = View.GONE
             text_edit.visibility = View.VISIBLE
@@ -76,6 +77,28 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         }
         }
 
+    private fun dataListRecycler(){
+        button_recycler.setOnClickListener {
+
+            recycler_list.setHasFixedSize(true)
+            recycler_list.setItemViewCacheSize(20)
+
+            recycler_list.setOnTouchListener(object: View.OnTouchListener {
+                override fun onTouch(v: View?, event: MotionEvent?): Boolean {
+                    Dialogs.dismissEvent()
+                    return false
+                }
+            })
+
+            recycler_list.layoutManager = LinearLayoutManager(this)
+            mAdapter = GenderAdapter(this, mGenderList)
+            mListRecyclerView?.adapter = mAdapter
+            recycler_list.adapter = mAdapter
+
+        }
+        }
     }
+
+
 
 
