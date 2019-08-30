@@ -43,7 +43,8 @@ object Dialogs {
 
         val buttonSave = dialog.findViewById<Button>(R.id.button_save)
         buttonSave.setOnClickListener {
-            Toast.makeText(activity, "Successfully submited..", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, "Successfully registered..", Toast.LENGTH_LONG).show()
+            dialog.dismiss()
         }
 
         dialog.show()
