@@ -9,4 +9,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="congratulations">Congratulations !!</string>
+    <string name="you_have_successfully_registerd">You have successfully registered</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">Cancel</string>
+    <string name="thankyou_for_using_the_app">ThankYou  for using the Gotasker app !! Have a nice day</string>
+    <string name="recycler_data">Data</string>
 </resources>
