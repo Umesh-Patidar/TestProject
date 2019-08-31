@@ -67,4 +67,6 @@ class GenderBottomDialog : BottomSheetDialogFragment() {
     interface IClickListener {
         fun buttonClick(genderList: List<Gender>)
     }
+
+
 }
