@@ -1,5 +1,6 @@
 package mytestproj.com
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
 
         text_edit.setOnClickListener {
             mGenderBottomDialog.show(supportFragmentManager, "add_photo_dialog_fragment")
+        }
+
+        button_next.setOnClickListener {
+          startActivity(Intent(this@MainActivity, BlogActivity::class.java))
         }
     }
 
