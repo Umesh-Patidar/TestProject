@@ -1,7 +1,7 @@
 package mytestproj.com
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import jp.wasabeef.blurry.Blurry
 import kotlinx.android.synthetic.main.activity_blog.*
 

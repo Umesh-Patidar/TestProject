@@ -2,13 +2,13 @@ package mytestproj.com.activity
 
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.MotionEvent
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_main.*
 import mytestproj.com.BlogActivity
 import mytestproj.com.R
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         // Dialogs.progressDialog(this@MainActivity).show()
         mListRecyclerView = findViewById(R.id.recycler_view)
         mButton = findViewById(R.id.button_submit)
-        mListRecyclerView?.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
+        mListRecyclerView?.layoutManager = LinearLayoutManager(this, RecyclerView.HORIZONTAL, false)
 
         editText.setOnClickListener {
             mGenderBottomDialog.show(supportFragmentManager, "add_photo_dialog_fragment")
