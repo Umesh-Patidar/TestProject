@@ -30,9 +30,7 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         // Dialogs.progressDialog(this@MainActivity).show()
-
         mListRecyclerView = findViewById(R.id.recycler_view)
         mButton = findViewById(R.id.button_submit)
         mListRecyclerView?.layoutManager = LinearLayoutManager(this, LinearLayout.HORIZONTAL, false)
