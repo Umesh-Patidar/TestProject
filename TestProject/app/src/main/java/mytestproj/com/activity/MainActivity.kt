@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import mytestproj.com.BlogActivity
 import mytestproj.com.R
 import mytestproj.com.adapter.GenderAdapter
 import mytestproj.com.fragment.GenderBottomDialog
@@ -30,6 +31,8 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+         //Dialogs.progressDialog(this@MainActivity).show()
+
         mListRecyclerView = findViewById(R.id.recycler_view)
         mButton = findViewById(R.id.button_submit)
         mListRecyclerView?.layoutManager = LinearLayoutManager(this,  LinearLayout.HORIZONTAL, false)
@@ -45,6 +48,7 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
         button_next.setOnClickListener {
           startActivity(Intent(this@MainActivity, BlogActivity::class.java))
         }
+
         dialogPopUp()
         dataListRecycler()
     }

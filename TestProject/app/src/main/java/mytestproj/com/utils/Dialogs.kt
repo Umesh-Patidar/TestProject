@@ -9,6 +9,8 @@ import android.widget.Button
 import android.widget.PopupWindow
 import android.widget.TextView
 import android.widget.Toast
+import com.squareup.picasso.Picasso
+import de.hdodenhof.circleimageview.CircleImageView
 import mytestproj.com.R
 
 object Dialogs {
@@ -50,6 +52,24 @@ object Dialogs {
         }
 
         dialog.show()
+    }
+
+    fun progressDialog(activity: Activity): Dialog {
+        val dialogProgress = Dialog(activity)
+        dialogProgress.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialogProgress.window!!.setBackgroundDrawableResource(android.R.color.transparent)
+        dialogProgress.setContentView(R.layout.layout_progress_dialog)
+        dialogProgress.setCanceledOnTouchOutside(false)
+        val icon = dialogProgress.findViewById(R.id.image_progress_icon) as CircleImageView
+        Picasso.get().load(R.drawable.ic_active_jobs).into(icon)
+        val layoutParams = dialogProgress.window!!.attributes
+        val window = dialogProgress.window
+        layoutParams.copyFrom(window!!.attributes)
+        layoutParams.width = WindowManager.LayoutParams.WRAP_CONTENT
+        layoutParams.height = WindowManager.LayoutParams.WRAP_CONTENT
+        window.attributes = layoutParams
+        layoutParams.gravity = Gravity.CENTER
+        return dialogProgress
     }
 
     interface IDialogCallback {
