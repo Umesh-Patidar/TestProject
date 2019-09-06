@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f45c42</color>
+    <color name="colorPrimaryDark">#f45c42</color>
+    <color name="colorAccent">#f45c42</color>
+
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorHint">#8b8b8c</color>
+    <color name="colorDark">#AF9595</color>
+    <color name="colorGray">#8b8b8c</color>
+    <color name="colorOrange">#f45c42</color>
+    <color name="colorText">#7A7A7A</color>
+    <color name="colorTextDark">#6B6B6B</color>
+    <color name="colorSkyBlue">#6AAEF3</color>
+    <color name="colorYellow">#f7a92e</color>
+
+    <color name="colorBlack">#000000</color>
+    <color name="colorProfile">#F3F7FD</color>
+    <color name="colorLightGray">#e7e7e7</color>
+    <color name="colorOpaque">#00000000</color>
+    <color name="colorblur">#00000000</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+
+    <color name="colorTextTitle">#acacac</color>
+    <color name="colorLightYellow">#f7a930</color>
+    <color name="colorGreenLight">#35D5A0</color>
+    <color name="colorGreenDark">#4dca4b</color>
+    <color name="colorDarkGray">#ebf0f2</color>
+    <color name="colorDarkBlue">#3eaee6</color>
+    <color name="colorRed">#ff000d</color>
+
+    <color name="colorThemeBlue">#2D495A</color>
+    <color name="colorThemeBlueLight">#426479</color>
+    <color name="colorBlue">#4f8eb8</color>
+    <color name="colorBoldBlue">#0078ef</color>
+    <color name="colorLightBlue">#ddf2ff</color>
+    <color name="colorLight">#acacac</color>
+    <color name="colorGreen">#FFFFFF</color>
+    <color name="colorFadingGray">#E6ECEE</color>
+</resources>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MyTestProj</string>
+    <string name="nav_home">home</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="calender">Calendar</string>
+    <string name="my_profile">My Profile</string>
+    <string name="title_promotional_bn">Promotions</string>
+    <string name="profile_menu">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lorem" translatable="false">gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg</string>
+    <string name="congratulations">Congratulations !!</string>
+    <string name="you_have_successfully_registerd">You have successfully registered</string>
+    <string name="submit">SUBMIT</string>
+    <string name="cancel">Cancel</string>
+    <string name="thankyou_for_using_the_app">ThankYou  for using the Gotasker app !! Have a nice day</string>
+    <string name="recycler_data">Data</string>
+
+</resources>
