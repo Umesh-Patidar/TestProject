@@ -47,6 +47,11 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
             startActivity(Intent(this@MainActivity, BlogActivity::class.java))
         }
 
+        button_click_me.setOnClickListener {
+            startActivity(Intent(this@MainActivity, BottomNavigationActivity::class.java))
+        }
+
+
         dialogPopUp()
         dataListRecycler()
     }

@@ -1,5 +1,7 @@
 package mytestproj.com.fragment
 
+import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -22,8 +24,11 @@ class GenderBottomDialog : BottomSheetDialogFragment() {
     lateinit var mContext: Context
     private lateinit var iClickListener : IClickListener
 
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
+    @SuppressLint("MissingSuperCall")
+    override fun onAttach(activity: Activity) {
+        if (context != null) {
+            super.onAttach(context!!)
+        }
         mContext = context!!
         iClickListener = activity as IClickListener
     }
