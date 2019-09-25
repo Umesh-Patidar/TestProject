@@ -51,6 +51,10 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
             startActivity(Intent(this@MainActivity, BottomNavigationActivity::class.java))
         }
 
+        button_summernote.setOnClickListener {
+            startActivity(Intent(this@MainActivity, SummerNoteActivity::class.java))
+        }
+
 
         dialogPopUp()
         dataListRecycler()
