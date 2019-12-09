@@ -55,6 +55,10 @@ class MainActivity : AppCompatActivity(), GenderBottomDialog.IClickListener {
             startActivity(Intent(this@MainActivity, SummerNoteActivity::class.java))
         }
 
+        button_animation.setOnClickListener {
+            startActivity(Intent(this@MainActivity, SpringAnimationActivity::class.java))
+        }
+
 
         dialogPopUp()
         dataListRecycler()

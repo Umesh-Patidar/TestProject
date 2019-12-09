@@ -1,14 +1,11 @@
 package mytestproj.com.fragment
 
-import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.LinearLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -24,12 +21,9 @@ class GenderBottomDialog : BottomSheetDialogFragment() {
     lateinit var mContext: Context
     private lateinit var iClickListener : IClickListener
 
-    @SuppressLint("MissingSuperCall")
-    override fun onAttach(activity: Activity) {
-        if (context != null) {
-            super.onAttach(context!!)
-        }
-        mContext = context!!
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        mContext = context
         iClickListener = activity as IClickListener
     }
 
@@ -54,7 +48,7 @@ class GenderBottomDialog : BottomSheetDialogFragment() {
 
         mListRecyclerView = view.findViewById(R.id.recycler_view)
         mButton = view.findViewById(R.id.button_submit)
-        mListRecyclerView?.layoutManager = GridLayoutManager(context, 2, LinearLayout.HORIZONTAL, false)
+        mListRecyclerView?.layoutManager = GridLayoutManager(context, 2, RecyclerView.HORIZONTAL, false)
 
         mButton?.setOnClickListener {
             iClickListener.buttonClick(mAdapter?.getValue()!!)
