@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="mytestproj.com">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -9,9 +11,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".activity.BottomNavigationActivity"></activity>
-        <activity android:name=".BlogActivity"></activity>
-        <activity android:name=".GenderSelectionActivity"></activity>
+        <activity android:name=".activity.SummerNoteActivity" />
+        <activity android:name=".activity.BottomNavigationActivity" />
+        <activity android:name=".BlogActivity" />
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
